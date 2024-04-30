@@ -48,7 +48,7 @@
                 "IsSelfExtracting": true,
                 "InstallDir": "C:\\ArcGIS\\Server",
                 "InstallDirPython": "C:\\Python39",
-                "PatchesDir": "[Path to Directory with Patches for Server]",
+                "PatchesDir": "C:\\Software\\Patches\\Server\\",
                 "PatchInstallOrder": [
                     "Array of patch names to install in the needed order"
                 ],
@@ -121,7 +121,7 @@
                 "IsSelfExtracting": true,
                 "InstallDir": "C:\\ArcGIS\\Portal",
                 "ContentDir": "C:\\arcgisportal",
-                "PatchesDir": "[Path to Directory with Patches for Portal]",
+                "PatchesDir": "C:\\Software\\Patches\\Portal\\",
                 "PatchInstallOrder": [
                     "Array of patch names to install in the needed order"
                 ]
@@ -148,7 +148,7 @@
                 "IsSelfExtracting": true,
                 "InstallDir": "C:\\ArcGIS\\DataStore",
                 "InstallAllFeatures": false,
-                "PatchesDir": "[Path to Directory with Patches for DataStore]",
+                "PatchesDir": "C:\\Software\\Patches\\DataStore\\",
                 "PatchInstallOrder": [
                     "Array of patch names to install in the needed order"
                 ]
@@ -164,7 +164,7 @@
                 "WebDeployPath": "C:\\Software\\WebDeploy_amd64_en-US.msi",
                 "WebDeployDownloadUrl": "https://download.microsoft.com/download/0/1/D/01DC28EA-638C-4A22-A57B-4CEF97755C6C/WebDeploy_amd64_en-US.msi",
                 "IsSelfExtracting": true,
-                "PatchesDir": "[Path to Directory with Patches for Web Adaptor]",
+                "PatchesDir": "C:\\Software\\Patches\\WebAdaptor\\",
                 "PatchInstallOrder": [
                     "Array of patch names to install in the needed order"
                 ]
