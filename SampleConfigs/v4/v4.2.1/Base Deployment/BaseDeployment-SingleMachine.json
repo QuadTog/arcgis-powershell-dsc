@@ -115,12 +115,10 @@
         },
         "Portal": {
             "LicenseFilePath": "[License File Path - Portal ]",
-            "PortalLicenseUserTypeId": "[Portal License User Type Id- Required for 10.7 and above]",
+            "PortalLicenseUserTypeId": "creatorUT",
             "Installer": {
                 "Path": "[Portal Installer Path]",
                 "IsSelfExtracting": true,
-                "WebStylesPath": "[Optional Parameter starting ArcGIS Enterprise 10.7.1 - Portal Web Styles Installer Path]",
-                "WebStylesInstallerIsSelfExtracting": false,
                 "InstallDir": "C:\\ArcGIS\\Portal",
                 "ContentDir": "C:\\arcgisportal",
                 "PatchesDir": "[Path to Directory with Patches for Portal]",
@@ -161,10 +159,10 @@
             "OverrideHTTPSBinding": true,
             "Installer": {
                 "Path": "[WebAdaptor Installer Path]",
-                "DotnetHostingBundlePath": "[Dotnet Hosting Bundle Installer Path]",
-                "DotnetHostingBundleDownloadUrl": "[Dotnet Hosting Bundle Installer Download Url]",
-                "WebDeployPath": "[Web Deploy Installer Path]",
-                "WebDeployDownloadUrl": "[Web Deploy Installer Download Url]",
+                "DotnetHostingBundlePath": "C:\\Software\\dotnet-hosting-6.0.9-win.exe",
+                "DotnetHostingBundleDownloadUrl": "https://download.visualstudio.microsoft.com/download/pr/eaa3eab9-cc21-44b5-a4e4-af31ee73b9fa/d8ad75d525dec0a30b52adc990796b11/dotnet-hosting-6.0.9-win.exe",
+                "WebDeployPath": "C:\\Software\\WebDeploy_amd64_en-US.msi",
+                "WebDeployDownloadUrl": "https://download.microsoft.com/download/0/1/D/01DC28EA-638C-4A22-A57B-4CEF97755C6C/WebDeploy_amd64_en-US.msi",
                 "IsSelfExtracting": true,
                 "PatchesDir": "[Path to Directory with Patches for Web Adaptor]",
                 "PatchInstallOrder": [
