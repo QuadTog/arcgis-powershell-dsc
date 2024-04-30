@@ -36,10 +36,6 @@
                 "IsDomainAccount": false,
                 "IsMSAAccount": false
             },
-            "ADServiceUser": {
-                "UserName": "[ADServiceUser Username - Active Directory Service user for enabling use of Integrated Windows Authentication with your portal.]",
-                "Password": "[ADServiceUser Password]"
-            },
             "AGOCredential":{
                 "UserName": "[ArcGIS Online Username]",
                 "Password": "[ArcGIS Online Password]"
@@ -50,14 +46,14 @@
             "Installer": {
                 "Path": "[Server Installer Path]",
                 "IsSelfExtracting": true,
-                "InstallDir": "[Server Install Dir - Ex. C:\\ArcGIS\\Server]",
-                "InstallDirPython": "[Python Install Dir - Ex. C:\\Python27] ",
+                "InstallDir": "C:\\ArcGIS\\Server",
+                "InstallDirPython": "C:\\Python39",
                 "PatchesDir": "[Path to Directory with Patches for Server]",
                 "PatchInstallOrder": [
                     "Array of patch names to install in the needed order"
                 ],
-                "EnableArcMapRuntime": true,
-                "EnableDotnetSupport": "[ Optional - True | False (Default)  - Enables .Net Extension Support. Available starting 10.9.1]"
+                "EnableArcMapRuntime": false,
+                "EnableDotnetSupport": false
             },
             "ServerDirectoriesRootLocation": "C:\\arcgisserver\\directories",
             "ConfigStoreLocation": "C:\\arcgisserver\\config-store",
@@ -114,8 +110,8 @@
                 "UserName": "[PrimarySiteAdmin Username]",
                 "Password": "[PrimarySiteAdmin Password]"
             },
-            "EnableHTTPSOnly": true,
-            "EnableHSTS": true
+            "EnableHTTPSOnly": false,
+            "EnableHSTS": false
         },
         "Portal": {
             "LicenseFilePath": "[License File Path - Portal ]",
@@ -124,37 +120,26 @@
                 "Path": "[Portal Installer Path]",
                 "IsSelfExtracting": true,
                 "WebStylesPath": "[Optional Parameter starting ArcGIS Enterprise 10.7.1 - Portal Web Styles Installer Path]",
-                "WebStylesInstallerIsSelfExtracting": "[ Optional - True (Default) | False ]",
-                "InstallDir": "[Portal Install Dir - Ex. C:\\ArcGIS\\Portal]",
-                "ContentDir": "[Portal Content Dir for Install- Ex. C:\\arcgisportal",
+                "WebStylesInstallerIsSelfExtracting": false,
+                "InstallDir": "C:\\ArcGIS\\Portal",
+                "ContentDir": "C:\\arcgisportal",
                 "PatchesDir": "[Path to Directory with Patches for Portal]",
                 "PatchInstallOrder": [
                     "Array of patch names to install in the needed order"
                 ]
             },
-            "ContentDirectoryLocation":"C:\\arcgisportal\\content",
+            "ContentDirectoryLocation": "C:\\arcgisportal\\content",
             "EnableAutomaticAccountCreation": true,
-            "DefaultRoleForUser": "[Optional - Values: account_user | account_publisher | <custom role ID>]",
+            "DefaultRoleForUser": "iAAAAAAAAAAAAAAA",
             "DefaultUserLicenseTypeIdForUser": "viewerUT",
             "PortalAdministrator": {
                 "UserName": "[PortalAdministrator Username]",
-                "Email": "[PortalAdministrator Email]",
+                "Email": "admin@test.com",
                 "Password": "[PortalAdministrator Password]",
                 "SecurityQuestionIndex": 1,
                 "SecurityAnswer": "vanilla"
             },
-            "EmailSettings":{
-                "SMTPServerAddress":"[SMTP Server Host Address]",
-                "From":"[SMTP Server Host Email From]",
-                "Label":"[SMTP Server Host Email From Label]",
-                "AuthenticationRequired":"[SMTP Server Host Authentication required flag - False | True]",
-                "SMTPPort":"[SMTP Server Host Port]",
-                "UserName": "[SMTP Server Host Authentication Username]",
-                "Password": "[SMTP Server Host Authentication Password]",
-                "PasswordFilePath": "[SMTP Server Host Authentication Password File Path]",
-                "EncryptionMethod": "[SMTP Server Host Encryption Method - SSL,TLS,NONE]"
-            },
-            "EnableHSTS": "[true|false]"
+            "EnableHSTS": false
         },
         "DataStore": {
             "ContentDirectoryLocation": "C:\\arcgisdatastore",
@@ -163,7 +148,7 @@
             "Installer": {
                 "Path": "[DataStore Installer Path]",
                 "IsSelfExtracting": true,
-                "InstallDir": "[DataStore Install Dir - Ex. C:\\ArcGIS\\DataStore]",
+                "InstallDir": "C:\\ArcGIS\\DataStore",
                 "InstallAllFeatures": false,
                 "PatchesDir": "[Path to Directory with Patches for DataStore]",
                 "PatchInstallOrder": [
