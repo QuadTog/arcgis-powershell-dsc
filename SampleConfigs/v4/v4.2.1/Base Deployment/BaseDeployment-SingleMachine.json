@@ -1,7 +1,7 @@
 {
     "AllNodes": [
         {
-            "NodeName": "[Machine Name]",
+            "NodeName": "gis-migration",
             "DataStoreTypes": [
                 "Relational"
             ],
@@ -22,7 +22,7 @@
         }
     ],
     "ConfigData": {
-        "Version": "[Version of ArcGIS Deployment]",
+        "Version": "11.1",
         "ServerContext": "server",
         "PortalContext": "portal",
         "ServerRole": "GeneralPurposeServer",
@@ -31,8 +31,8 @@
         "DownloadPatches": true,
         "Credentials": {
             "ServiceAccount": {
-                "UserName": "[ServiceAccount Username - Can be a Domain Account]",
-                "Password": "[ServiceAccount Password]",
+                "UserName": "test",
+                "Password": "test123",
                 "IsDomainAccount": false,
                 "IsMSAAccount": false
             },
@@ -49,14 +49,14 @@
             "LicenseFilePath": "[License File Path - Server ]",
             "Installer": {
                 "Path": "[Server Installer Path]",
-                "IsSelfExtracting": "[ Optional - True (Default) | False ]",
+                "IsSelfExtracting": true,
                 "InstallDir": "[Server Install Dir - Ex. C:\\ArcGIS\\Server]",
                 "InstallDirPython": "[Python Install Dir - Ex. C:\\Python27] ",
                 "PatchesDir": "[Path to Directory with Patches for Server]",
                 "PatchInstallOrder": [
                     "Array of patch names to install in the needed order"
                 ],
-                "EnableArcMapRuntime": "[ Optional - True (Default) | False - Enables ArcMapRuntime. Available starting 10.9.1]",
+                "EnableArcMapRuntime": true,
                 "EnableDotnetSupport": "[ Optional - True | False (Default)  - Enables .Net Extension Support. Available starting 10.9.1]"
             },
             "ServerDirectoriesRootLocation": "C:\\arcgisserver\\directories",
@@ -114,15 +114,15 @@
                 "UserName": "[PrimarySiteAdmin Username]",
                 "Password": "[PrimarySiteAdmin Password]"
             },
-            "EnableHTTPSOnly": "[true|false]",
-            "EnableHSTS": "[true|false]"
+            "EnableHTTPSOnly": true,
+            "EnableHSTS": true
         },
         "Portal": {
             "LicenseFilePath": "[License File Path - Portal ]",
             "PortalLicenseUserTypeId": "[Portal License User Type Id- Required for 10.7 and above]",
             "Installer": {
                 "Path": "[Portal Installer Path]",
-                "IsSelfExtracting": "[ Optional - True (Default) | False ]",
+                "IsSelfExtracting": true,
                 "WebStylesPath": "[Optional Parameter starting ArcGIS Enterprise 10.7.1 - Portal Web Styles Installer Path]",
                 "WebStylesInstallerIsSelfExtracting": "[ Optional - True (Default) | False ]",
                 "InstallDir": "[Portal Install Dir - Ex. C:\\ArcGIS\\Portal]",
@@ -135,7 +135,7 @@
             "ContentDirectoryLocation":"C:\\arcgisportal\\content",
             "EnableAutomaticAccountCreation": true,
             "DefaultRoleForUser": "[Optional - Values: account_user | account_publisher | <custom role ID>]",
-            "DefaultUserLicenseTypeIdForUser": "[Optional (Valid for 10.7 and later) - Values: fieldWorkerUT | GISProfessionalStdUT | GISProfessionalBasicUT | GISProfessionalAdvUT | creatorUT | editorUT | viewerUT]",
+            "DefaultUserLicenseTypeIdForUser": "viewerUT",
             "PortalAdministrator": {
                 "UserName": "[PortalAdministrator Username]",
                 "Email": "[PortalAdministrator Email]",
@@ -157,12 +157,12 @@
             "EnableHSTS": "[true|false]"
         },
         "DataStore": {
-            "ContentDirectoryLocation": "[Content Dir DataStore - C:\\arcgisdatastore]",
+            "ContentDirectoryLocation": "C:\\arcgisdatastore",
             "EnableFailoverOnPrimaryStop": false,
             "EnablePointInTimeRecovery": false,
             "Installer": {
                 "Path": "[DataStore Installer Path]",
-                "IsSelfExtracting": "[ Optional - True (Default) | False ]",
+                "IsSelfExtracting": true,
                 "InstallDir": "[DataStore Install Dir - Ex. C:\\ArcGIS\\DataStore]",
                 "InstallAllFeatures": false,
                 "PatchesDir": "[Path to Directory with Patches for DataStore]",
@@ -180,7 +180,7 @@
                 "DotnetHostingBundleDownloadUrl": "[Dotnet Hosting Bundle Installer Download Url]",
                 "WebDeployPath": "[Web Deploy Installer Path]",
                 "WebDeployDownloadUrl": "[Web Deploy Installer Download Url]",
-                "IsSelfExtracting": "[ Optional - True (Default) | False ]",
+                "IsSelfExtracting": true,
                 "PatchesDir": "[Path to Directory with Patches for Web Adaptor]",
                 "PatchInstallOrder": [
                     "Array of patch names to install in the needed order"
